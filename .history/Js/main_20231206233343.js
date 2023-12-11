@@ -3,11 +3,11 @@ $(document).ready(function () {
   $(window).on("load", function () {
     setTimeout(() => {
       $(".loader").show();
-    }, 500);
+    }, 1000);
     setTimeout(() => {
       $(".container-movie").show();
       $(".loader").hide();
-    }, 1000);
+    }, 1500);
     var swiper = new Swiper(".mySwiper", {
       spaceBetween: 30,
       centeredSlides: true,

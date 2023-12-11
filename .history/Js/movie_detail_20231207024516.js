@@ -1,19 +1,18 @@
 $(document).ready(function () {
-  $(".container-movie").hide();
+  $(".seri-movie-detail").hide();
   $(window).on("load", function () {
     setTimeout(() => {
       $(".loader").show();
-    }, 500);
-    setTimeout(() => {
-      $(".container-movie").show();
-      $(".loader").hide();
     }, 1000);
-    var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
-        delay: 10000,
-        disableOnInteraction: false,
+    setTimeout(() => {
+      $(".seri-movie-detail").show();
+      $(".loader").hide();
+    }, 1500);
+    var swiper5 = new Swiper(".mySwiper5", {
+      spaceBetween: 10,
+      slidesPerView: 3,
+      hashNavigation: {
+        watchState: true,
       },
       pagination: {
         el: ".swiper-pagination",
@@ -24,63 +23,7 @@ $(document).ready(function () {
         prevEl: ".swiper-button-prev",
       },
     });
-    var swiper1 = new Swiper(".mySwiper1", {
-      slidesPerView: 5,
-      spaceBetween: 10,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-    var swiper2 = new Swiper(".mySwiper2", {
-      slidesPerView: 6,
-      spaceBetween: 10,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
 
-    var swiper3 = new Swiper(".mySwiper3", {
-      slidesPerView: 7,
-      spaceBetween: 2,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-    var swiper4 = new Swiper(".mySwiper4", {
-      slidesPerView: 6,
-      spaceBetween: 2,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-    /**
-     * Phim Bộ
-     */
-    const series_movie = document.querySelector(".series-movie");
-    series_movie.addEventListener("click", function (event) {
-      event.preventDefault();
-      const targetScrollY = 2400;
-      window.scrollTo({
-        top: targetScrollY,
-        behavior: "smooth",
-      });
-    });
-    /**
-     * Tvshow
-     */
-    const series_tvShow = document.querySelector(".series-tvShow");
-    series_tvShow.addEventListener("click", function (event) {
-      event.preventDefault();
-      const targetScrollY = 4872;
-      window.scrollTo({
-        top: targetScrollY,
-        behavior: "smooth",
-      });
-    });
     /**
      * Search
      */
@@ -124,21 +67,6 @@ $(document).ready(function () {
     const btn_vip = document.querySelector(".btn-vip");
     const purchase_vip = document.querySelector(".purchase-vip");
     const btn_close_vip = document.querySelector(".purchase-vip-close");
-    var swiper5 = new Swiper(".mySwiper5", {
-      spaceBetween: 10,
-      slidesPerView: 3,
-      hashNavigation: {
-        watchState: true,
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-    });
 
     btn_vip.addEventListener("click", function (e) {
       e.preventDefault();
